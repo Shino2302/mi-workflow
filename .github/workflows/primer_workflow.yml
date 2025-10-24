@@ -5,7 +5,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Clonar el repositorio:
       - name: Checkout código
         uses: actions/checkout@v3
+      # Ejecutar Script de ejemplo:
       - name: Ejecutar script
         run: echo '¡Hola desde Github Actions!'
+      # Instalar Python:
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # Ejecutar un comando de Python directamente:
+      - name: Ejecutar comando de Python:
+        run: python -c "print('Hola desde Python, dentro de mi Github Actions!')"
