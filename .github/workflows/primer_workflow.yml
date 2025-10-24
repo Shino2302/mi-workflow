@@ -17,5 +17,5 @@ jobs:
         with:
           python-version: '3.11'
       # Ejecutar un comando de Python directamente:
-      - name: Ejecutar comando de Python:
+      - name: Ejecutar comando de Python
         run: python -c "print('Hola desde Python, dentro de mi Github Actions!')"
